@@ -1,4 +1,4 @@
-/*Task 1. Palindrome*/
+/* Task 1 */
 
 var sum_1 ="";
 var sum_2 ="";
