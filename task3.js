@@ -1,14 +1,13 @@
 /* Task 3 */
 
-sum = parseInt(process.argv[2])+ parseInt (process.argv[3]);
-console.log(sum);
+sum_2 = parseInt(process.argv[2])+ parseInt (process.argv[3]);
 var hour = 0;
 var min = 0;
+var ost = 0;
 //перевод в часы
-while (sum>=3600){
-	sum=sum-3600;
-	hour = hour+1;
-}
+
+ost = sum_2%3600;
+hour = (sum_2 - ost)/3600; 
 
 if (hour == 1 || hour == 21){
 	process.stdout.write(hour + " час ");
@@ -21,10 +20,9 @@ else {
 }
 
 //перевод в минуты
-while (sum>=60){
-	sum=sum-60;
-	min = min + 1;
-}
+var sum = ost%60;
+min = (ost - sum)/60;
+
 
 if (min == 1 || min == 21 || min == 31 || min == 41 || min == 51 ){
 	process.stdout.write(min + " минута ");
@@ -38,6 +36,7 @@ else {
 }
 
 //вывод секунд
+
 if (sum == 1 || sum == 21 || sum == 31 || sum == 41 || sum == 51 ){
 	process.stdout.write(sum + " секунда");
 }
