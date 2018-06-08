@@ -27,8 +27,8 @@ str = str.replace(punctRE, '').replace(spaceRE,'');
 // сравнение полученных строк и вывод результата
 
 if (sum_1==sum_2){
-	process.stdout.write("true");
+	process.stdout.write("YES");
 }
 else {
-	process.stdout.write("fasle");
+	process.stdout.write("NO");
 }
