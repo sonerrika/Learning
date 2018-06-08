@@ -1,10 +1,11 @@
 /* Task 1 */
 
+function Check (str){
 var sum_1 ="";
 var sum_2 ="";
 var punctRE = /[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-.\/:;<=>?@\[\]^_`{|}~]/g;
 var spaceRE = /\s/g;
-var str = process.argv[2];
+//var str = process.argv[2];
 
 //Приведение строки к упрощенному виду: один регистр, без пробелов и знаков препинания
 str = str.toUpperCase();
@@ -28,7 +29,12 @@ str = str.replace(punctRE, '').replace(spaceRE,'');
 
 if (sum_1==sum_2){
 	process.stdout.write("YES");
+	//return("yes");
 }
 else {
 	process.stdout.write("NO");
+	//return("no");
+	
 }
+}
+Check(process.argv[2]);
